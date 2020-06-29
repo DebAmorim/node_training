@@ -1,0 +1,24 @@
+{
+  "name": "node_training",
+  "version": "1.0.0",
+  "description": "Aprendizado sobre node.JS e criação de API REST.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DebAmorim/node_training.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DebAmorim/node_training/issues"
+  },
+  "homepage": "https://github.com/DebAmorim/node_training#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+
+}
