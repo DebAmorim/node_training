@@ -1,5 +1,15 @@
 
 _________________________________________________________________________________________________________________
+DOCKER
+
+Permite fazer a conteinerização de recursos ou softwares dentro da máquina local.
+Por que utilizar docker?
+Em algumas instalações encontramos erros por já termos instalado o programa antes e ter sobrado algum resquício,
+ou termos de formatar a máquina por já termos instalado muita coisa.
+MySql, Mongo, Node, recursos para desenvolvedores podem ser instalados em contêiners (máquinas virtuais) para que 
+se em algum momento for necessário desinstalar não se mexa em nada do sistema. Torna fácil a manipulação.
+
+_________________________________________________________________________________________________________________
 EXPRESS
 
 Express é um micro-framework para auxiliar na tratativa de rotas
@@ -17,6 +27,38 @@ app.get('/', (req, res) => {
 });
 //diz para a aplicação ouvir a porta 3001 do navegador
 app.listen(3001);
+
+
+_________________________________________________________________________________________________________________
+MONGO DB
+
+Instalação por docker:
+-Baixar a máquina virtual do mongo: docker pull mongo
+-Subir a máquina virtual, o novo contâiner contendo a instalação rodando:
+--name: nome da máquina virtual
+-p: diz que ao tentar acessar a porta x da máquina, ele deve direcionar para a porta x do mongo
+-d: qual imagem quero usar
+docker run --name mongodb -p 27017:27017 -d mongo
+
+depois de executar esse comando
+docker ps: mostra quais imagens estão rodando
+
+para testar se está rodando:
+no navegador, localhost:27017
+vai exibir uma mensagem que informa a tentativa de acessar o mongo:
+It looks like you are trying to access MongoDB over HTTP on the native driver port.
+
+Para testar schemas, conexões:
+Robo 3T
+
+Quando a máquina for reiniciada a imagem provavelmente vai parar de rodar.
+Não é necessário executar docker run novamente.
+
+docker ps -a: mostra imagens em pausa
+
+pode-se fazer:
+docker start nome_da_imagem
+
 
 
 _________________________________________________________________________________________________________________
