@@ -59,6 +59,12 @@ docker ps -a: mostra imagens em pausa
 pode-se fazer:
 docker start nome_da_imagem
 
+Conectando o banco com a aplicação
+npm install mongoose
+
+Mongoose: ORM de bancos não relacionais com mongodb.
+ORM: encapsula a lógica das operações do banco através do código, então não se usa a linguagem sql nativa e sim
+código javascript.
 
 
 _________________________________________________________________________________________________________________

@@ -1,17 +1,17 @@
 const express = require('express');
+const mongoose = require('mongoose');
 
-
+//Iniciando o app
 const app = express();
 
-app.get('/', (req, res) => {
-    //req: requisição feita ao servidor acessando essa url.
-    //Contém todos os parâmetros da requisição:
-    //parâmetros, corpo da requisição, cabeçalho, usuário, autenticação, ip
+//Iniciando o DB
+mongoose.connect('mongodb://localhost:27017/nodeapi', {useNewUrlParser: true});
 
-    //res: resposta dada à requisição. Pode ser qualquer valor
+//Rotas
+app.get('/', (req, res) => {
     res.send('Hello, Deb!')
 });
 
-//diz para a aplicação ouvir a porta 3001 do navegador
+
 app.listen(3001);
 
