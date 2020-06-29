@@ -1,7 +1,6 @@
 const express = require('express');
 
-//o express é um micro-framework para auxiliar na tratativa de rotas
-//e views (não utilizadas aqui por ser uma API REST, mas são as formas de visualização)
+
 const app = express();
 
 app.get('/', (req, res) => {
@@ -10,8 +9,9 @@ app.get('/', (req, res) => {
     //parâmetros, corpo da requisição, cabeçalho, usuário, autenticação, ip
 
     //res: resposta dada à requisição. Pode ser qualquer valor
-    res.send('Hello, Débora!')
+    res.send('Hello, Deb!')
 });
 
 //diz para a aplicação ouvir a porta 3001 do navegador
 app.listen(3001);
+

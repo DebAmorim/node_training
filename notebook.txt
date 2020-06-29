@@ -1,0 +1,32 @@
+
+_________________________________________________________________________________________________________________
+EXPRESS
+
+Express é um micro-framework para auxiliar na tratativa de rotas
+e views (não utilizadas aqui por ser uma API REST, mas são as formas de visualização).
+Exemplo de uso:
+const app = express();
+
+app.get('/', (req, res) => {
+    //req: requisição feita ao servidor acessando essa url.
+    //Contém todos os parâmetros da requisição:
+    //parâmetros, corpo da requisição, cabeçalho, usuário, autenticação, ip
+
+    //res: resposta dada à requisição. Pode ser qualquer valor
+    res.send('Hello, Débora!')
+});
+//diz para a aplicação ouvir a porta 3001 do navegador
+app.listen(3001);
+
+
+_________________________________________________________________________________________________________________
+NODEMON
+
+Nodemon: ferramenta que faz automaticamente a reinicialização do servidor quando é feita
+alguma alteração no código.
+
+Como usar: 
+
+no package.json criar um script:
+exemplo: "dev": "nodemon server.js"
+e executa: npm run dev
