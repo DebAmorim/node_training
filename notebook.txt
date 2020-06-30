@@ -30,6 +30,11 @@ app.listen(3001);
 
 
 _________________________________________________________________________________________________________________
+MVC
+
+Dentro do MVC, o model representa o banco de dados.
+
+_________________________________________________________________________________________________________________
 MONGO DB
 
 Instalação por docker:
@@ -78,3 +83,11 @@ Como usar:
 no package.json criar um script:
 exemplo: "dev": "nodemon server.js"
 e executa: npm run dev
+
+
+
+_________________________________________________________________________________________________________________
+REQUIRE
+
+Biblioteca que faz o require de um diretório em todos os arquivos automaticamente. Útil quando se tem muitos
+models.
