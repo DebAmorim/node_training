@@ -12,18 +12,10 @@ requireDir("./src/models");
 // require('./src/models/product');
 
 //pra testar se o model está funcionando:
-const product = mongoose.model('Product');
+// const product = mongoose.model('Product');
 
 //Rotas
-app.get('/', (req, res) => {
-    product.create({
-        title: 'React Native',
-        description: 'Build native apps with React',
-        url: 'http://github.com/facebook/react-native'
-    });
-    
-    return res.send('Hello, Deb!')
-});
+app.use("/api", require("./src/routes"));
 
 
 app.listen(3001);
